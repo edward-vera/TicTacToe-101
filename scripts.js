@@ -7,10 +7,12 @@
     // next to each @TODO you will find tasks that need to be finished
 
 // The variable will change from X to O based on what player turn it is. We need to hold this so we can place an X or O on the board when they're clicked.
+
 let currentMarker = 'X'
-
-
-
+let board = 
+['','','']
+['','','']
+['','','']
 
 // this "handleClick" function is called when a box is clicked. Here, "element" will hold the same value as "this" does in the HTML. 
 // "this" is a special word in JS but "element" could have been "thing" or "el" or whatever we wanted it to be as long as we use it again in the "console.log" statement
@@ -25,15 +27,6 @@ const handleClick = (element) => {
     addMarker(element.id)
   }
 }
-
-
-
-
-
-
-
-
-
 
 
 // this function places the "currentMarker" inside the HTML element that was clicked and calls the "changeMarker" function.
@@ -52,18 +45,8 @@ const addMarker = (id) => {
   // .innerHTML 
 document.getElementById(id).innerHTML = currentMarker
 changeMarker(id)
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 // This "changeMarker" function changes "X" to "O" in the "currentMarker" variable or "O" to "X"
 const changeMarker = () => {
@@ -73,15 +56,6 @@ const changeMarker = () => {
     currentMarker = "X"
   }
 }
-
-
-
-
-
-
-
-
-
 
 // This "resetBoard" function is called when the user clicks on the "Restart" button.
 const resetBoard = () => {
@@ -105,4 +79,6 @@ const resetBoard = () => {
     // sets the innerHTML to null to replace the "X" or "O"
     squares[i].innerHTML = null
   }  
+
 }
+
